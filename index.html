@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mi primera página</title>
+  <style>
+  body {
+    background-color: #eaeaea;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  img {
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+</style>
+
+</head>
+
+
+<body>
+<div class="card">
+  <h1>Mi lista de tareas</h1>
+
+  <input type="text" id="tareaInput" placeholder="Escribe una tarea">
+  <button onclick="agregarTarea()">Agregar</button>
+
+  <ul id="lista"></ul>
+</div>
+
+  <script>
+  function agregarTarea() {
+    let input = document.getElementById("tareaInput");
+    let texto = input.value;
+
+    if (texto === "") {
+      return;
+    }
+
+    let li = document.createElement("li");
+    li.textContent = texto;
+
+    // Al hacer clic, se elimina la tarea
+    li.onclick = function () {
+      li.remove();
+    };
+
+    document.getElementById("lista").appendChild(li);
+
+    input.value = "";
+  }
+</script>
+
+
+
+</body>
+
+
+</html>
