@@ -2,68 +2,48 @@
 <html>
 <head>
   <meta charset="UTF-8">
-
+  <title>Mi lista de tareas</title>
 
   <style>
-  body {
-    background-color: #eaeaea;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+    body {
+      background-color: #eaeaea;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  .card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-  }
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-  h1 {
-    color: #333;
-  }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-  h2 {
-    margin-top: 20px;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 5px 0;
-  }
-
-  img {
-    margin-top: 15px;
-    border-radius: 8px;
-  }
-</style>
-
+    li {
+      margin: 8px 0;
+    }
+  </style>
 </head>
 
-
 <body>
-<div class="card">
-  <h1>Mi lista de tareas</h1>
+  <div class="card">
+    <h1>Mi lista de tareas</h1>
 
-  <input type="text" id="tareaInput" placeholder="Escribe una tarea">
-  <button onclick="agregarTarea()">Agregar</button>
+    <input type="text" id="tareaInput" placeholder="Escribe una tarea">
+    <button onclick="agregarTarea()">Agregar</button>
 
-  <ul id="lista"></ul>
-</div>
+    <ul id="lista"></ul>
+  </div>
 
-  
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
-
 </html>
