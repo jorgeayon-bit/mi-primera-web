@@ -7,7 +7,6 @@ function agregarTarea() {
     const li = document.createElement("li");
     li.textContent = texto;
 
-    // botón eliminar
     const eliminar = document.createElement("button");
     eliminar.textContent = "❌";
     eliminar.style.marginLeft = "10px";
@@ -22,4 +21,3 @@ function agregarTarea() {
     input.value = "";
   }
 }
-
