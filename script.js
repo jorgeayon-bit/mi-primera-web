@@ -1,19 +1,26 @@
-function agregarTarea() {
-  let input = document.getElementById("tareaInput");
-  let texto = input.value;
+const boton = document.getElementById("agregar");
+const input = document.getElementById("tarea");
+const lista = document.getElementById("lista");
 
-  if (texto === "") {
-    return;
+boton.addEventListener("click", function () {
+  const texto = input.value;
+
+  if (texto !== "") {
+    const li = document.createElement("li");
+    li.textContent = texto;
+
+    // crear botón eliminar
+    const eliminar = document.createElement("button");
+    eliminar.textContent = "❌";
+    eliminar.style.marginLeft = "10px";
+
+    eliminar.addEventListener("click", function () {
+      lista.removeChild(li);
+    });
+
+    li.appendChild(eliminar);
+    lista.appendChild(li);
+
+    input.value = "";
   }
-
-  let li = document.createElement("li");
-  li.textContent = texto;
-
-  li.onclick = function () {
-    li.remove();
-  };
-
-  document.getElementById("lista").appendChild(li);
-
-  input.value = "";
-}
+});
