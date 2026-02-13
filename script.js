@@ -1,26 +1,25 @@
-const boton = document.getElementById("agregar");
-const input = document.getElementById("tarea");
-const lista = document.getElementById("lista");
-
-boton.addEventListener("click", function () {
+function agregarTarea() {
+  const input = document.getElementById("tareaInput");
   const texto = input.value;
+  const lista = document.getElementById("lista");
 
   if (texto !== "") {
     const li = document.createElement("li");
     li.textContent = texto;
 
-    // crear botón eliminar
+    // botón eliminar
     const eliminar = document.createElement("button");
     eliminar.textContent = "❌";
     eliminar.style.marginLeft = "10px";
 
-    eliminar.addEventListener("click", function () {
+    eliminar.onclick = function () {
       lista.removeChild(li);
-    });
+    };
 
     li.appendChild(eliminar);
     lista.appendChild(li);
 
     input.value = "";
   }
-});
+}
+
