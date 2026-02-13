@@ -59,28 +59,7 @@
   <ul id="lista"></ul>
 </div>
 
-  <script>
-  function agregarTarea() {
-    let input = document.getElementById("tareaInput");
-    let texto = input.value;
-
-    if (texto === "") {
-      return;
-    }
-
-    let li = document.createElement("li");
-    li.textContent = texto;
-
-    // Al hacer clic, se elimina la tarea
-    li.onclick = function () {
-      li.remove();
-    };
-
-    document.getElementById("lista").appendChild(li);
-
-    input.value = "";
-  }
-</script>
+  
 
 
 <script src="script.js"></script>
